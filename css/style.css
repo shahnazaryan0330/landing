@@ -260,7 +260,7 @@ button {
     position: absolute;
     bottom: 50px;
     z-index: 3;
-    padding: 20px 50px;
+    padding: 20px 40px;
     border-radius: 13px;
     color: var(--color-1);
     font-size: 18px;
@@ -269,23 +269,14 @@ button {
     box-shadow: 0 0 30px 0 var(--color-1);
     transition: all .3s ease;
     cursor: pointer;
-    animation: phone_btn 2s ease 9s;
-}
-
-@keyframes phone_btn {
-    0% {
-        letter-spacing: .3px;
-    }
-    50% {
-        letter-spacing: 3px;
-    }
-    100% {
-        letter-spacing: .3px;
-    }
 }
 
 /* hover */
 .phone_btn:hover {
+    letter-spacing: 3px;
+}
+
+.phone_btn:focus {
     letter-spacing: 3px;
 }
 
