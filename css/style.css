@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 @font-face {
@@ -91,8 +99,12 @@ button {
 
 /* header */
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: auto;
     padding: 120px 60px;
     max-width: 1200px;
@@ -103,8 +115,13 @@ button {
 }
 
 .header_col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 100px;
     z-index: 3;
 }
@@ -131,20 +148,41 @@ button {
     --gradient-color-3: #122d52;
     --gradient-color-4: #6257ff;
     z-index: 0;
-    animation: wave 10s linear infinite;
+    -webkit-animation: wave 10s linear infinite;
+            animation: wave 10s linear infinite;
+}
+
+@-webkit-keyframes wave {
+    0% {
+        -webkit-clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+                clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+    }
+
+    50% {
+        -webkit-clip-path: polygon(100% 0%, 0% 0%, 0.00% 75.93%, 2.00% 75.53%, 4.00% 75.01%, 6.00% 74.41%, 8.00% 73.76%, 10.00% 73.08%, 12.00% 72.42%, 14.00% 71.80%, 16.00% 71.26%, 18.00% 70.83%, 20.00% 70.52%, 22.00% 70.36%, 24.00% 70.35%, 26.00% 70.49%, 28.00% 70.77%, 30.00% 71.19%, 32.00% 71.72%, 34.00% 72.32%, 36.00% 72.98%, 38.00% 73.66%, 40.00% 74.32%, 42.00% 74.93%, 44.00% 75.46%, 46.00% 75.88%, 48.00% 76.17%, 50.00% 76.32%, 52.00% 76.31%, 54.00% 76.15%, 56.00% 75.85%, 58.00% 75.42%, 60.00% 74.89%, 62.00% 74.27%, 64.00% 73.61%, 66.00% 72.93%, 68.00% 72.28%, 70.00% 71.67%, 72.00% 71.16%, 74.00% 70.75%, 76.00% 70.47%, 78.00% 70.34%, 80.00% 70.37%, 82.00% 70.54%, 84.00% 70.86%, 86.00% 71.30%, 88.00% 71.84%, 90.00% 72.47%, 92.00% 73.13%, 94.00% 73.81%, 96.00% 74.46%, 98.00% 75.06%, 100.00% 75.56%);
+                clip-path: polygon(100% 0%, 0% 0%, 0.00% 75.93%, 2.00% 75.53%, 4.00% 75.01%, 6.00% 74.41%, 8.00% 73.76%, 10.00% 73.08%, 12.00% 72.42%, 14.00% 71.80%, 16.00% 71.26%, 18.00% 70.83%, 20.00% 70.52%, 22.00% 70.36%, 24.00% 70.35%, 26.00% 70.49%, 28.00% 70.77%, 30.00% 71.19%, 32.00% 71.72%, 34.00% 72.32%, 36.00% 72.98%, 38.00% 73.66%, 40.00% 74.32%, 42.00% 74.93%, 44.00% 75.46%, 46.00% 75.88%, 48.00% 76.17%, 50.00% 76.32%, 52.00% 76.31%, 54.00% 76.15%, 56.00% 75.85%, 58.00% 75.42%, 60.00% 74.89%, 62.00% 74.27%, 64.00% 73.61%, 66.00% 72.93%, 68.00% 72.28%, 70.00% 71.67%, 72.00% 71.16%, 74.00% 70.75%, 76.00% 70.47%, 78.00% 70.34%, 80.00% 70.37%, 82.00% 70.54%, 84.00% 70.86%, 86.00% 71.30%, 88.00% 71.84%, 90.00% 72.47%, 92.00% 73.13%, 94.00% 73.81%, 96.00% 74.46%, 98.00% 75.06%, 100.00% 75.56%);
+    }
+
+    100% {
+        -webkit-clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+                clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+    }
 }
 
 @keyframes wave {
     0% {
-        clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+        -webkit-clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+                clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
     }
 
     50% {
-        clip-path: polygon(100% 0%, 0% 0%, 0.00% 75.93%, 2.00% 75.53%, 4.00% 75.01%, 6.00% 74.41%, 8.00% 73.76%, 10.00% 73.08%, 12.00% 72.42%, 14.00% 71.80%, 16.00% 71.26%, 18.00% 70.83%, 20.00% 70.52%, 22.00% 70.36%, 24.00% 70.35%, 26.00% 70.49%, 28.00% 70.77%, 30.00% 71.19%, 32.00% 71.72%, 34.00% 72.32%, 36.00% 72.98%, 38.00% 73.66%, 40.00% 74.32%, 42.00% 74.93%, 44.00% 75.46%, 46.00% 75.88%, 48.00% 76.17%, 50.00% 76.32%, 52.00% 76.31%, 54.00% 76.15%, 56.00% 75.85%, 58.00% 75.42%, 60.00% 74.89%, 62.00% 74.27%, 64.00% 73.61%, 66.00% 72.93%, 68.00% 72.28%, 70.00% 71.67%, 72.00% 71.16%, 74.00% 70.75%, 76.00% 70.47%, 78.00% 70.34%, 80.00% 70.37%, 82.00% 70.54%, 84.00% 70.86%, 86.00% 71.30%, 88.00% 71.84%, 90.00% 72.47%, 92.00% 73.13%, 94.00% 73.81%, 96.00% 74.46%, 98.00% 75.06%, 100.00% 75.56%);
+        -webkit-clip-path: polygon(100% 0%, 0% 0%, 0.00% 75.93%, 2.00% 75.53%, 4.00% 75.01%, 6.00% 74.41%, 8.00% 73.76%, 10.00% 73.08%, 12.00% 72.42%, 14.00% 71.80%, 16.00% 71.26%, 18.00% 70.83%, 20.00% 70.52%, 22.00% 70.36%, 24.00% 70.35%, 26.00% 70.49%, 28.00% 70.77%, 30.00% 71.19%, 32.00% 71.72%, 34.00% 72.32%, 36.00% 72.98%, 38.00% 73.66%, 40.00% 74.32%, 42.00% 74.93%, 44.00% 75.46%, 46.00% 75.88%, 48.00% 76.17%, 50.00% 76.32%, 52.00% 76.31%, 54.00% 76.15%, 56.00% 75.85%, 58.00% 75.42%, 60.00% 74.89%, 62.00% 74.27%, 64.00% 73.61%, 66.00% 72.93%, 68.00% 72.28%, 70.00% 71.67%, 72.00% 71.16%, 74.00% 70.75%, 76.00% 70.47%, 78.00% 70.34%, 80.00% 70.37%, 82.00% 70.54%, 84.00% 70.86%, 86.00% 71.30%, 88.00% 71.84%, 90.00% 72.47%, 92.00% 73.13%, 94.00% 73.81%, 96.00% 74.46%, 98.00% 75.06%, 100.00% 75.56%);
+                clip-path: polygon(100% 0%, 0% 0%, 0.00% 75.93%, 2.00% 75.53%, 4.00% 75.01%, 6.00% 74.41%, 8.00% 73.76%, 10.00% 73.08%, 12.00% 72.42%, 14.00% 71.80%, 16.00% 71.26%, 18.00% 70.83%, 20.00% 70.52%, 22.00% 70.36%, 24.00% 70.35%, 26.00% 70.49%, 28.00% 70.77%, 30.00% 71.19%, 32.00% 71.72%, 34.00% 72.32%, 36.00% 72.98%, 38.00% 73.66%, 40.00% 74.32%, 42.00% 74.93%, 44.00% 75.46%, 46.00% 75.88%, 48.00% 76.17%, 50.00% 76.32%, 52.00% 76.31%, 54.00% 76.15%, 56.00% 75.85%, 58.00% 75.42%, 60.00% 74.89%, 62.00% 74.27%, 64.00% 73.61%, 66.00% 72.93%, 68.00% 72.28%, 70.00% 71.67%, 72.00% 71.16%, 74.00% 70.75%, 76.00% 70.47%, 78.00% 70.34%, 80.00% 70.37%, 82.00% 70.54%, 84.00% 70.86%, 86.00% 71.30%, 88.00% 71.84%, 90.00% 72.47%, 92.00% 73.13%, 94.00% 73.81%, 96.00% 74.46%, 98.00% 75.06%, 100.00% 75.56%);
     }
 
     100% {
-        clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+        -webkit-clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
+                clip-path: polygon(100% 0%, 0% 0%, 0.00% 76.33%, 2.00% 76.28%, 4.00% 76.12%, 6.00% 75.87%, 8.00% 75.52%, 10.00% 75.10%, 12.00% 74.61%, 14.00% 74.08%, 16.00% 73.52%, 18.00% 72.96%, 20.00% 72.41%, 22.00% 71.89%, 24.00% 71.42%, 26.00% 71.02%, 28.00% 70.70%, 30.00% 70.48%, 32.00% 70.36%, 34.00% 70.34%, 36.00% 70.43%, 38.00% 70.62%, 40.00% 70.91%, 42.00% 71.28%, 44.00% 71.73%, 46.00% 72.23%, 48.00% 72.77%, 50.00% 73.33%, 52.00% 73.90%, 54.00% 74.44%, 56.00% 74.94%, 58.00% 75.39%, 60.00% 75.76%, 62.00% 76.05%, 64.00% 76.24%, 66.00% 76.33%, 68.00% 76.31%, 70.00% 76.19%, 72.00% 75.96%, 74.00% 75.64%, 76.00% 75.25%, 78.00% 74.78%, 80.00% 74.26%, 82.00% 73.71%, 84.00% 73.14%, 86.00% 72.59%, 88.00% 72.06%, 90.00% 71.57%, 92.00% 71.15%, 94.00% 70.80%, 96.00% 70.54%, 98.00% 70.39%, 100.00% 70.33%);
     }
 }
 
@@ -154,9 +192,15 @@ button {
     padding: 8px;
     width: 320px;
     height: 610px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     cursor: pointer;
 }
 
@@ -176,9 +220,11 @@ button {
     width: 100%;
     height: 100%;
     background-color: #f3f9ff80;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     border-radius: 29px;
-    box-shadow: 0 50px 100px -20px #866cff63, 0 30px 60px -30px #0000004d, 0px -10px 50px -5px #ffffff8a;
+    -webkit-box-shadow: 0 50px 100px -20px #866cff63, 0 30px 60px -30px #0000004d, 0px -10px 50px -5px #ffffff8a;
+            box-shadow: 0 50px 100px -20px #866cff63, 0 30px 60px -30px #0000004d, 0px -10px 50px -5px #ffffff8a;
     overflow: hidden;
     pointer-events: none;
 }
@@ -187,6 +233,8 @@ button {
 .phone_clock {
     position: absolute;
     top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -203,32 +251,54 @@ button {
     left: 0;
     z-index: 2;
     padding: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     height: 100%;
     pointer-events: none;
 }
 
 .message {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 5px 0;
     padding: 10px;
     width: 100%;
     border-radius: 18px;
     background-color: #ffffff;
-    transform-origin: left center;
+    -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transition: margin .3s ease, -webkit-transform .3s ease;
+    transition: margin .3s ease, -webkit-transform .3s ease;
+    -o-transition: transform .3s ease, margin .3s ease;
     transition: transform .3s ease, margin .3s ease;
-    box-shadow: 0 0 20px 0 var(--color-5), 0 0 5px 0 #ffffff4f;
+    transition: transform .3s ease, margin .3s ease, -webkit-transform .3s ease;
+    -webkit-box-shadow: 0 0 20px 0 var(--color-5), 0 0 5px 0 #ffffff4f;
+            box-shadow: 0 0 20px 0 var(--color-5), 0 0 5px 0 #ffffff4f;
     pointer-events: visible;
 }
 
 .message_anim {
     margin: 15px 0;
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
 }
 
 .message_title {
@@ -251,8 +321,14 @@ button {
 .message_icon {
     width: 50px;
     height: 50px;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -o-transition: transform .5s ease;
     transition: transform .5s ease;
-    transform-origin: center bottom;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+    -webkit-transform-origin: center bottom;
+        -ms-transform-origin: center bottom;
+            transform-origin: center bottom;
 }
 
 /* phone btn */
@@ -266,10 +342,26 @@ button {
     font-size: 18px;
     letter-spacing: .3px;
     background-color: var(--color-4);
-    box-shadow: 0 0 30px 0 var(--color-1);
+    -webkit-box-shadow: 0 0 30px 0 var(--color-1);
+            box-shadow: 0 0 30px 0 var(--color-1);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
     transition: all .3s ease;
     cursor: pointer;
-    animation: phone_btn 2s ease 9s;
+    -webkit-animation: phone_btn 2s ease 9s;
+            animation: phone_btn 2s ease 9s;
+}
+
+@-webkit-keyframes phone_btn {
+    0% {
+        letter-spacing: .3px;
+    }
+    50% {
+        letter-spacing: 3px;
+    }
+    100% {
+        letter-spacing: .3px;
+    }
 }
 
 @keyframes phone_btn {
@@ -291,7 +383,9 @@ button {
 
 /* logo */
 .logo {
-    transform-origin: left center;
+    -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
+            transform-origin: left center;
     z-index: 1;
     cursor: pointer;
 }
@@ -302,10 +396,16 @@ button {
 
 /* loan info */
 .info_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 70px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: 190px;
 }
 
@@ -326,9 +426,16 @@ button {
     width: 100%;
     padding-top: 40px;
     padding-bottom: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 50px;
+    -webkit-transition: height .3s linear;
+    -o-transition: height .3s linear;
     transition: height .3s linear;
     overflow: hidden;
 }
@@ -344,19 +451,29 @@ button {
 .loan_form {
     position: relative;
     z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 50px;
     width: 100%;
     padding: 20px;
     border-radius: 15px;
     background-color: var(--color-1);
-    box-shadow: 0px 0px 30px 0px var(--color-5);
+    -webkit-box-shadow: 0px 0px 30px 0px var(--color-5);
+            box-shadow: 0px 0px 30px 0px var(--color-5);
 }
 
 .loan_label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
 }
 
@@ -374,8 +491,12 @@ button {
 }
 
 .min_max {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     margin-top: 10px;
 }
@@ -386,8 +507,13 @@ button {
 }
 
 .form_col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 50px;
     width: 100%;
 }
@@ -396,11 +522,16 @@ button {
 #amount,
 #month_count {
     -webkit-appearance: none;
-    appearance: none;
+    -moz-appearance: none;
+         appearance: none;
     height: 5px;
+    background: -webkit-gradient(linear, left top, right top, from(#0084ff), to(#002fff));
+    background: -o-linear-gradient(left, #0084ff, #002fff);
     background: linear-gradient(90deg, #0084ff, #002fff);
     border-radius: 3px;
     outline: none;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
     transition: background 0.3s;
 }
 
@@ -415,6 +546,7 @@ button {
     outline: 3px solid #002fff;
     border-radius: 30%;
     cursor: pointer;
+    -webkit-transition: background 0.3s;
     transition: background 0.3s;
 }
 
@@ -427,6 +559,7 @@ button {
     outline: 3px solid #002fff;
     border-radius: 30%;
     cursor: pointer;
+    -moz-transition: background 0.3s;
     transition: background 0.3s;
 }
 
@@ -439,6 +572,7 @@ button {
     outline: 3px solid #002fff;
     border-radius: 30%;
     cursor: pointer;
+    -ms-transition: background 0.3s;
     transition: background 0.3s;
 }
 
@@ -465,6 +599,8 @@ button {
 
 /* checkbox */
 .checkbox_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 15px;
 }
@@ -485,13 +621,19 @@ button {
 
 .slider {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 40px;
     height: 23px;
     border-radius: 10px;
     background-color: var(--color-2);
+    -webkit-transition: .2s background-color ease-in-out;
+    -o-transition: .2s background-color ease-in-out;
     transition: .2s background-color ease-in-out;
     cursor: pointer;
 }
@@ -505,16 +647,21 @@ button {
     height: 17px;
     border-radius: 8px;
     background-color: var(--color-1);
+    -webkit-transition: .2s transform ease;
+    -o-transition: .2s transform ease;
     transition: .2s transform ease;
 }
 
 .checkbox_label input:checked+.slider {
     background-color: #0084ff;
-    box-shadow: inset 0 0px 8px 5px #002fff8f;
+    -webkit-box-shadow: inset 0 0px 8px 5px #002fff8f;
+            box-shadow: inset 0 0px 8px 5px #002fff8f;
 }
 
 .checkbox_label input:checked+.slider::before {
-    transform: translateX(17px);
+    -webkit-transform: translateX(17px);
+        -ms-transform: translateX(17px);
+            transform: translateX(17px);
 }
 
 .checkbox_text {
@@ -529,7 +676,9 @@ button {
 
 /*  */
 .form_col:nth-child(2) {
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     gap: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -564,9 +713,15 @@ button {
 }
 
 .form_submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 16px;
@@ -574,6 +729,8 @@ button {
     color: var(--color-1);
     font-weight: var(--fw-medium);
     background-color: var(--color-4);
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
     transition: .5s all ease;
 }
 
@@ -597,16 +754,26 @@ button {
 }
 
 .footer_inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 30px;
 }
 
 .footer_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 15px;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
 }
 
 .footer_nav-item,
@@ -618,6 +785,8 @@ button {
 
 .footer_nav-item a {
     display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     text-decoration: underline;
 }
@@ -627,11 +796,19 @@ button {
 }
 
 .bank_faq {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 15px;
-    flex-basis: 50%;
-    justify-content: flex-end;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .text {
