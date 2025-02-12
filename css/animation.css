@@ -1,0 +1,103 @@
+.logo {
+    transition: transform .3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+}
+
+.message:nth-child(1) {
+    animation: message1 1s ease;
+}
+
+@keyframes message1 {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
+        transform: translateY(500%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        transform: translateY(0%) scale(1);
+    }
+}
+
+.message:nth-child(2) {
+    animation: message2 1s ease;
+}
+
+@keyframes message2 {
+    0%, 20% {
+        opacity: 0;
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
+        transform: translateY(500%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        transform: translateY(0%) scale(1);
+    }
+}
+
+.message:nth-child(3) {
+    animation: message3 1s ease;
+}
+
+@keyframes message3 {
+    0%, 40% {
+        opacity: 0;
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
+        transform: translateY(500%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        transform: translateY(0%) scale(1);
+    }
+}
+
+.visible {
+    animation: visible 1s ease forwards;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* clock colon */
+#colon {
+    animation: colon 1s steps(1) infinite;
+}
+
+@keyframes colon {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

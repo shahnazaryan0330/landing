@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="background">
+            <canvas id="gradient-canvas"></canvas>
+        </div>
+
+        <div class="header_col">
+            <a class="logo" href="#">
+                <svg width="52" height="32" viewBox="0 0 52 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Первая линия -->
+                    <path d="M43.264 24.1039H2.912L0 32H40.352L43.264 24.1039Z" fill="white">
+                        <animate attributeName="transform" type="translate" from="-52 0" to="0 0" dur="0.6s" begin="0s"
+                            fill="freeze" />
+                        <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin=".3s" fill="freeze" />
+                    </path>
+
+                    <!-- Вторая линия -->
+                    <path d="M47.424 12.0519H7.072L4.16 19.9481H44.512L47.424 12.0519Z" fill="white">
+                        <animate attributeName="transform" type="translate" from="52 0" to="0 0" dur="0.6s" begin="0.6s"
+                            fill="freeze" />
+                        <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin=".6s" fill="freeze" />
+                    </path>
+
+                    <!-- Третья линия -->
+                    <path d="M52 0H11.648L8.736 7.8961H49.088L52 0Z" fill="white">
+                        <animate attributeName="transform" type="translate" from="-52 0" to="0 0" dur="0.6s"
+                            begin="1.2s" fill="freeze" />
+                        <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin=".9s" fill="freeze" />
+                    </path>
+                </svg>
+            </a>
+
+            <a href="#loan_tab" class="phone">
+                <div class="phone_screen"></div>
+
+                <div class="message_list">
+                    <div class="message" style="transition: transform .3s ease;" data-ico="doc_ico">
+                        <div>
+                            <h2 class="message_title">ԼՐԱՑՐԵՔ ԴԻՄՈՒՄ</h2>
+                            <p class="message_text">Ընդամենը մի քանի դաշտ</p>
+                        </div>
+                        <div class="message_icon doc_ico"></div>
+                    </div>
+                    <div class="message" data-ico="selfie_ico">
+                        <div>
+                            <h2 class="message_title">ՍԵԼՖԻ ԱՐԵՔ</h2>
+                            <p class="message_text">Անցեք նույնականացում</p>
+                        </div>
+                        <div class="message_icon selfie_ico"></div>
+                    </div>
+                    <div class="message" data-ico="money_ico">
+                        <div>
+                            <h2 class="message_title">ՍՏԱՑԵՔ ԳՈՒՄԱՐ</h2>
+                            <p class="message_text">Մի քանի րոպեի ընթացքում</p>
+                        </div>
+                        <div class="message_icon money_ico"></div>
+                    </div>
+                </div>
+
+                <div class="phone_border"></div>
+
+                <div class="phone_clock">
+                    <span id="digit_left"></span>
+                    <span id="colon">:</span>
+                    <span id="digit_right"></span>
+                </div>
+
+                <button class="phone_btn">Հաշվել վարկը</button>
+            </a>
+        </div>
+
+        <div class="header_col">
+            <ul class="info_list">
+                <li class="info_list_item">
+                    <h3 class="slogan">Մինչև 10 մլն</h3>
+                    <p class="info_text">Գումար ՀՀ դրամ</p>
+                </li>
+                <li class="info_list_item">
+                    <h3 class="slogan">Մինչև 60 ամիս</h3>
+                    <p class="info_text">Ժամկետ</p>
+                </li>
+                <li class="info_list_item">
+                    <h3 class="slogan">Անվճար</h3>
+                    <p class="info_text">Քարտի առաքում</p>
+                </li>
+                <li class="info_list_item">
+                    <h3 class="slogan">Ակնթարթային</h3>
+                    <p class="info_text">Հաշվեգրում</p>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main container" id="loan_tab">
+        <h1 class="title hidden" id="scrollAnim2">Հաշվարկեք վարկը</h1>
+
+        <div class="loan_form hidden">
+            <div class="form_col">
+                <label class="loan_label" for="amount" id="scrollAnim3">
+                    <h2 class="subtitle">Վարկի գումար</h2>
+                    <div class="current_amount">10,000,000 ֏</div>
+                    <input type="range" name="amount" id="amount" min="100000" max="10000000" value="10000000"
+                        step="10000">
+                    <div class="min_max">
+                        <span>100 հազ ֏</span>
+                        <span>10 մլն ֏</span>
+                    </div>
+                </label>
+
+                <label class="loan_label" for="month_count">
+                    <h2 class="subtitle">Վարկի ժամկետ</h2>
+                    <div class="current_month">60 ամիս</div>
+                    <input type="range" name="month_count" id="month_count" min="6" max="60" value="60">
+                    <div class="min_max">
+                        <span>6 ամիս</span>
+                        <span>60 ամիս</span>
+                    </div>
+                </label>
+
+                <div class="checkbox_wrapper">
+                    <div class="checkbox_text"><span>-2%,</span> եթե աշխատավարձը մեր Բանկի քարտով է</div>
+                    <label class="checkbox_label" for="payday_checkbox">
+                        <input type="checkbox" name="payday_checkbox" id="payday_checkbox">
+                        <div class="slider"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form_col">
+                <div class="monthly_fee">
+                    <h4 class="monthly_fee_title">Ամենամսյա վճար</h4>
+                    <p class="monthly_fee_text">254,479 ֏</p>
+                </div>
+
+                <div class="percent">
+                    <h4 class="percent_title">Անվանական տոկոսադրույք</h4>
+                    <p class="percent_text">18.1 %</p>
+                </div>
+
+                <div class="form_submit_wrapper">
+                    <button class="form_submit" data-url="a5PaHR0cHM6Ly9vbmxpbmVjcmVkaXQudnRiLmFtLyNjYWxjdWxhdGVfY3JlZGl0">Ստանալ վարկ</button>
+                </div>
+                <p class="oferta">Նախնական հաշվարկ. Չի հանդիսանում հրապարակային օֆերտա</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_inner">
+                <ul class="footer_nav">
+                    <li class="footer_nav-item">
+                        <a href="#">
+                            <svg class="footer_logo" width="52" height="32" viewBox="0 0 52 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <!-- Первая линия -->
+                                <path d="M43.264 24.1039H2.912L0 32H40.352L43.264 24.1039Z" fill="white">
+                                    <animate attributeName="transform" type="translate" from="-52 0" to="0 0" dur="0.6s"
+                                        begin="0s" fill="freeze" />
+                                    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin=".3s"
+                                        fill="freeze" />
+                                </path>
+
+                                <!-- Вторая линия -->
+                                <path d="M47.424 12.0519H7.072L4.16 19.9481H44.512L47.424 12.0519Z" fill="white">
+                                    <animate attributeName="transform" type="translate" from="52 0" to="0 0" dur="0.6s"
+                                        begin="0.6s" fill="freeze" />
+                                    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin=".6s"
+                                        fill="freeze" />
+                                </path>
+
+                                <!-- Третья линия -->
+                                <path d="M52 0H11.648L8.736 7.8961H49.088L52 0Z" fill="white">
+                                    <animate attributeName="transform" type="translate" from="-52 0" to="0 0" dur="0.6s"
+                                        begin="1.2s" fill="freeze" />
+                                    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin=".9s"
+                                        fill="freeze" />
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="footer_nav-item">
+                        ՀՀ, 0006, ք․ Երևան, Մանանդյան փ. 33/3
+                    </li>
+
+                    <li class="footer_nav-item">
+                        <a id="telnum">87-87</a>
+                    </li>
+                </ul>
+
+                <div class="bank_faq">
+                    <p class="text">
+                        Բանկի կողմից մատուցվող ծառայությունների համար ամբողջական տեղեկատվություն ստանալու համար
+                        անհրաժեշտ է այցելել պաշտոնական ինտերնետային կայք՝ https://www.vtb.am/am
+                    </p>
+                    <p class="text">
+                        Բանկը վերահսկվում է ՀՀ Կենտրոնական բանկի կողմից:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="./script/gradient.js"></script>
+    <script defer src="./script/inputRange.js"></script>
+    <script defer src="./script/lottie.min.js"></script>
+    <script type="module" src="./script/script.js"></script>
+</body>
+
+</html>
