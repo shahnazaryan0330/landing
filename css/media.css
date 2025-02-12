@@ -5,6 +5,7 @@
 
     .info_list {
         gap: 50px;
+        width: 474px;
         height: 170px;
     }
 
@@ -23,6 +24,7 @@
     }
 
     .info_list {
+        width: auto;
         height: auto;
     }
 }
@@ -65,7 +67,7 @@
 
 @media (max-width: 1024px) and (max-height: 1400px) {
     .background {
-        height: 70vh;
+        height: 80vh;
     }
 }
 
@@ -91,6 +93,7 @@
     .info_list {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         gap: 50px 0;
     }
