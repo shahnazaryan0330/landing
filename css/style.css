@@ -126,10 +126,14 @@ button {
 #gradient-canvas {
     width: 100%;
     height: 100%;
-    --gradient-color-1: #8400ff;
+    /* --gradient-color-1: #8400ff;
     --gradient-color-2: #122d52;
     --gradient-color-3: #122d52;
-    --gradient-color-4: #6257ff;
+    --gradient-color-4: #6257ff; */
+    --gradient-color-1: #0084FF;
+    --gradient-color-2: #001ABB;
+    --gradient-color-3: #001ABB;
+    --gradient-color-4: #203EBE;
     z-index: 0;
     animation: wave 10s linear infinite;
 }
@@ -635,4 +639,12 @@ button {
 .hidden {
     visibility: hidden;
     opacity: 0;
+}
+
+.footer_link {
+    color: var(--color-1);
+    text-decoration: underline;
+    font-size: var(--fz-2);
+    letter-spacing: 1px;
+    font-weight: var(--fw-thin);
 }

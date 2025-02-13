@@ -212,7 +212,15 @@ document.addEventListener('DOMContentLoaded', () => {
     redirectingBtn.addEventListener('click', () => {
         const attr = redirectingBtn.getAttribute('data-url')
 
-        window.open(atob(attr.slice(3, attr.length)), '_blank');
+        window.open(atob(attr.slice(3, attr.length)), '_blank')
+    })
+
+    const toLink = document.querySelector('.footer_link')
+
+    toLink.addEventListener('click', () => {
+        const attr = toLink.getAttribute('data-url')
+        
+        window.open(atob(attr.slice(3, attr.length)), '_blank')
     })
     
     const telLink = document.querySelector('#telnum')
