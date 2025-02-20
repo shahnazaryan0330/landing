@@ -12,6 +12,7 @@
     background: -o-linear-gradient(top, white, black);
     background: linear-gradient(to bottom, white, black);
 }
+
 .logo {
     -webkit-transition: -webkit-transform .3s ease;
     transition: -webkit-transform .3s ease;
