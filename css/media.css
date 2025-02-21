@@ -1,6 +1,6 @@
 @media (max-width: 1201px) {
     .header {
-        padding: 50px 60px 150px;
+        padding: 50px 60px 190px;
     }
 
     .info_list {
@@ -15,6 +15,10 @@
 
     .info_text {
         font-size: var(--fz-2);
+    }
+
+    .phone {
+        top: 100px;
     }
 }
 
@@ -140,6 +144,10 @@
     .main {
         padding-top: 100px;
     }
+
+    .phone {
+        top: 47px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -179,6 +187,7 @@
 
 @media (max-width: 500px) {
     .phone {
+        top: 70px;
         width: 280px;
         height: 540px;
     }
@@ -199,7 +208,6 @@
 
     .title {
         font-size: 32px;
-        text-indent: 0px;
     }
 
     .message_anim {

@@ -94,6 +94,7 @@ button {
     padding: 120px 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: auto;
     max-width: 1200px;
     min-width: 320px;
@@ -107,11 +108,6 @@ button {
     flex-direction: column;
     gap: 100px;
     z-index: 3;
-}
-
-.header_col:nth-child(3) {
-    position: relative;
-    top: 200px;
 }
 
 .background {
@@ -282,6 +278,9 @@ button {
 
 /* logo */
 .logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
     transform-origin: left center;
     z-index: 1;
     cursor: pointer;
@@ -328,7 +327,6 @@ button {
 .title {
     font-weight: var(--fw-thin);
     font-size: 40px;
-    text-indent: 40px;
     color: var(--color-2);
 }
 
@@ -601,10 +599,13 @@ button {
     flex-basis: 50%;
 }
 
-.footer_nav-item,
-.footer_nav-item * {
+.footer_nav-item {
     padding: 3px 5px;
     border-radius: 5px;
+    color: var(--color-2);
+}
+
+.footer_nav-item * {
     color: var(--color-2);
 }
 
